@@ -57,7 +57,7 @@
         // The location of Uluru
         let latitude = "{{$latitude}}";
         let longitude = "{{$longitude}}";
-        console.log(typeof(parseFloat(latitude).toFixed(6)))
+        console.log(Math.floor(parseFloat(latitude).toFixed(6)))
         const uluru = { lat: parseFloat(latitude).toFixed(6), lng: parseFloat(longitude).toFixed(6) };
         // const uluru = 'https://www.google.com/maps/place/%D8%A7%D9%8A%D8%B3+%D9%83%D8%B1%D9%8A%D9%85+10+%D9%8A%D9%88%D9%86%D9%8A%D9%88%E2%80%AD/@,,15z/data=!4m5!3m4!1s0x15c3dbe519ac5d19:0xb0adf1f0859a392b!8m2!3d21.6010947!4d39.1437748';
         // The map, centered at Uluru
