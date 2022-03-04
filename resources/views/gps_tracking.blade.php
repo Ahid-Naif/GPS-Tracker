@@ -50,4 +50,29 @@
         </tbody>
     </table>
 </div>
+
+<script>
+    // Initialize and add the map
+    function initMap() {
+        // The location of Uluru
+        let latitude = "{{$latitude}}";
+        let longitude = "{{$longitude}}";
+        const uluru = { lat: Math.floor(latitude), lng: Math.floor(longitude) };
+        // const uluru = 'https://www.google.com/maps/place/%D8%A7%D9%8A%D8%B3+%D9%83%D8%B1%D9%8A%D9%85+10+%D9%8A%D9%88%D9%86%D9%8A%D9%88%E2%80%AD/@,,15z/data=!4m5!3m4!1s0x15c3dbe519ac5d19:0xb0adf1f0859a392b!8m2!3d21.6010947!4d39.1437748';
+        // The map, centered at Uluru
+        const map = new google.maps.Map(document.getElementById("map"), {
+            zoom: 15,
+            center: uluru,
+        });
+        // The marker, positioned at Uluru
+        const marker = new google.maps.Marker({
+            position: uluru,
+            map: map,
+        });
+    }
+
+    setTimeout(function(){
+        window.location.reload(1);
+    }, 5000);
+</script>
 @endsection
