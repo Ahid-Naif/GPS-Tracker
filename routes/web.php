@@ -35,7 +35,6 @@ Route::get('/sendValues', function () {
    if(isset($_GET['latitude']))
    {
       $latitude = $_GET['latitude']/10000;
-      dd($latitude);
       DB::table('gps_values')->where('name', 'latitude')->update(['value' => $latitude]);
    }
 
