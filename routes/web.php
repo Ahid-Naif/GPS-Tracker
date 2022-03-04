@@ -34,13 +34,14 @@ Route::get('/sendValues', function () {
 
    if(isset($_GET['latitude']))
    {
-      $latitude = $_GET['latitude'];
+      $latitude = $_GET['latitude']/10000;
+      dd($latitude);
       DB::table('gps_values')->where('name', 'latitude')->update(['value' => $latitude]);
    }
 
    if(isset($_GET['longitude']))
    {
-      $longitude = $_GET['longitude'];
+      $longitude = $_GET['longitude']/10000;
       DB::table('gps_values')->where('name', 'longitude')->update(['value' => $longitude]);
    }
 
