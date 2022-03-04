@@ -57,7 +57,7 @@
         // The location of Uluru
         let latitude = "{{$latitude}}";
         let longitude = "{{$longitude}}";
-        longitude = Math.round((longitude + Number.EPSILON) * 1000000) / 1000000
+        longitude = parseFloat(longitude);
         console.log(longitude);
         console.log(typeof(longitude));
 
